@@ -1,0 +1,16 @@
+type Person {
+    id: ID!
+    firstname: String
+    lastname: String
+    age: Int
+}
+
+type Query {
+    personByLastname(lastname: String): [Person]!
+    allPersonQuery: [Person]!
+    personByNames(name1: String, name2: String): [Person]
+}
+
+type Mutation {
+    addPerson1(id: ID): Person!
+}
